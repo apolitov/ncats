@@ -1,0 +1,17 @@
+<ul class="main-menu">
+    <li class="logo">
+        <!-- If we're not on main page — provide a link to root via logo else simply display logotype" -->
+        <% if @currentPage isnt 'Главная': %>
+            <a href='/'></a>
+        <% end %>
+    </li>
+    <li <%= if @currentPage is 'Работы' then 'class=active' %> >
+        Работы
+    </li>
+    <li <%= if @currentPage is 'Блог' then 'class=active' %> >
+        Блог
+    </li>
+    <li <%= if @currentPage is 'О нас' then 'class=active' %> >
+        О нас
+    </li>
+</ul>

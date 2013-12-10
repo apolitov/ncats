@@ -1,0 +1,120 @@
+@import "base";
+
+$transparent-gray: rgba(255,255,255, 0.6);
+
+/* NAVIGATION ELEMENTS */
+
+ul.main-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.behind-screen-btn {
+	$approx-height: 2em;
+
+	@include transition(max-width 1s ease-out, background-color 0.3s ease-out);
+	position: fixed;
+	right: 0;
+	top: 50%;
+	margin-top: (- $approx-height/2);
+	white-space: nowrap;
+	background-color: $transparent-gray;
+	height: $approx-height;
+	line-height: $approx-height;
+	max-width: 0;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+
+	span {
+		color: red;
+		padding: 0 $approx-height/2 0 $approx-height/4;
+	}
+
+	&:before {
+		@include border-left-radius($approx-height/2);
+		@include transition(background-color 0.3s ease-out);
+		content: "<";
+		position: absolute;
+		left: (- $approx-height/2);
+		top: 0;
+		height: $approx-height;
+		width: ($approx-height/2);
+		background-color: $transparent-gray;
+
+	}
+
+	&:hover {
+		max-width: 20em;
+		background-color: white;
+
+		&:before {
+			background-color: white;
+		}
+	}
+}
+
+.page-control {
+	$control-size: 3em;
+	position: fixed;
+	top: 50%;
+	margin-top: (- $control-size/2);
+	font-size: 0.8rem;
+	color: #333;
+
+	.page-index {
+		width: $control-size;
+		line-height: $control-size;
+		height: $control-size;
+		text-align: center;
+		background: $transparent-gray;
+	}
+
+	.page-prev, .page-next {
+		position: absolute;
+		left: 0;
+		width: $control-size;
+		text-align: center;
+	}
+
+	.page-prev {
+		top: -2em;
+	}
+
+	.page-next {
+		bottom: -2em;
+	}
+}
+
+
+/* PROMO SECTIONS */
+.section {
+	text-align: center;
+}
+
+footer {
+	position: absolute;
+	left: 0;
+	bottom: 5rem;
+	width: 100%;
+}
+
+.show-case-btn {
+	position: relative;
+	padding: 1rem 6rem;
+	font-size: 1.33rem;
+	background: $transparent-gray;
+}
+
+.angry-birds {
+	@include bg-cover('../img/backgrounds/ab.jpg');
+}
+
+.starbucks {
+	@include bg-cover('../img/backgrounds/starbucks.jpg');
+}
+
+.starbucks-inverted {
+	@include bg-cover('../img/backgrounds/starbucks_inv.jpg');
+}

@@ -1,20 +1,32 @@
 {
   "min": {
-    "js": {
-      "src": ["out/vendor/jquery.js", "out/vendor/log.js", "out/vendor/modernizr.js", "out/scripts/script.js"],
-      "dest": "out/scripts/all.min.js"
+    "vendor": {
+      "src": ["out/scripts/vendors/jquery.js", "out/scripts/vendors/log.js", "out/scripts/vendors/script.js"],
+      "dest": "out/scripts/vendors/vendors.min.js"
+    },
+    "modernizr": {
+      "src": ["out/scripts/vendors/modernizr.js"],
+      "dest": "out/scripts/vendors/modernizr.min.js"
+    },
+    "index": {
+      "src": ["out/scripts/index.js"],
+      "dest": "out/scripts/index.js"
     }
   },
   "concat": {
-    "css": {
-      "src": ["out/vendor/normalize.css","out/styles/style.css"],
-      "dest": "out/styles/all.css"
+    "normalize": {
+      "src": ["out/scripts/vendors/normalize.css","out/styles/style.css"],
+      "dest": "out/styles/normalization.css"
     }
   },
   "cssmin": {
-    "all": {
-      "src": ["out/styles/all.css"],
-      "dest": "out/styles/all.min.css"
+    "normalize": {
+      "src": ["out/styles/normalization.css"],
+      "dest": "out/styles/normalization.min.css"
+    },
+    "index": {
+      "src": ["out/styles/index.css"],
+      "dest": "out/styles/index.min.css"
     }
   }
 }
