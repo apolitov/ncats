@@ -133,20 +133,6 @@ docpadConfig = {
 
             # Chain
             @
-    plugins:
-        htmlmin:
-            htmlminOptions:
-                removeComments: true
-                removeCommentsFromCDATA: false
-                removeCDATASectionsFromCDATA: false
-                collapseWhitespace: true
-                collapseBooleanAttributes: false
-                removeAttributeQuotes: false
-                removeRedundantAttributes: false
-                useShortDoctype: false
-                removeEmptyAttributes: false
-                removeOptionalTags: false
-                removeEmptyElements: false
 }
 
 # Export our DocPad Configuration

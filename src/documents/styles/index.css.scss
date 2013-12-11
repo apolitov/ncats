@@ -106,15 +106,3 @@ footer {
 	font-size: 1.33rem;
 	background: $transparent-gray;
 }
-
-.angry-birds {
-	@include bg-cover('../img/backgrounds/ab.jpg');
-}
-
-.starbucks {
-	@include bg-cover('../img/backgrounds/starbucks.jpg');
-}
-
-.starbucks-inverted {
-	@include bg-cover('../img/backgrounds/starbucks_inv.jpg');
-}

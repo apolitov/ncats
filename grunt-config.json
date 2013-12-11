@@ -1,17 +1,14 @@
 {
   "min": {
-    "vendor": {
-      "src": ["out/scripts/vendors/jquery.js", "out/scripts/vendors/log.js", "out/scripts/vendors/script.js"],
-      "dest": "out/scripts/vendors/vendors.min.js"
-    },
-    "modernizr": {
-      "src": ["out/scripts/vendors/modernizr.js"],
-      "dest": "out/scripts/vendors/modernizr.min.js"
-    },
     "index": {
       "src": ["out/scripts/index.js"],
-      "dest": "out/scripts/index.js"
-    }
+      "dest": "out/scripts/index.min.js"
+    },
+  "works": {
+    "works": {
+      "src": ["out/scripts/works.js"],
+      "dest": "out/scripts/works.min.js"
+    },
   },
   "concat": {
     "normalize": {
@@ -27,6 +24,22 @@
     "index": {
       "src": ["out/styles/index.css"],
       "dest": "out/styles/index.min.css"
+    },
+    "works": {
+      "src": ["out/styles/works.css"],
+      "dest": "out/styles/works.min.css"
+    },
+    "angry-birds": {
+      "src": ["out/styles/brands/angry-birds.css"],
+      "dest": "out/styles/brands/angry-birds.min.css"
+    },
+    "starbucks": {
+      "src": ["out/styles/brands/starbucks.css"],
+      "dest": "out/styles/brands/starbucks.min.css"
+    },
+    "starbucks-inverted": {
+      "src": ["out/styles/brands/starbucks-inverted.css"],
+      "dest": "out/styles/brands/starbucks-inverted.min.css"
     }
   }
 }

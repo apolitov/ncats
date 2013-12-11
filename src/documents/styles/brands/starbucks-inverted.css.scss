@@ -1,0 +1,5 @@
+@import "../base";
+
+main .section.starbucks-inverted {
+	@include bg-cover('../../img/backgrounds/starbucks_inv.jpg');
+}

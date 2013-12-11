@@ -1,0 +1,28 @@
+<!-- CSS -->
+<% @requiredCss = ['/styles/index.min.css', '/scripts/vendors/jquery.fullPage.css'] %>
+<!-- Brand dependings -->
+<% @requiredCss = @requiredCss.concat(['styles/brands/angry-birds.min.css']) %>
+<% @requiredCss = @requiredCss.concat(['styles/brands/starbucks.min.css']) %>
+<% @requiredCss = @requiredCss.concat(['styles/brands/starbucks-inverted.min.css']) %>
+
+<!-- JS -->
+<% @requiredJs = ['/scripts/index.min.js', '/scripts/vendors/jquery.fullPage.min.js'] %>
+
+<%- @partial("head", {css: @requiredCss}) %>
+	<main>
+		<%- @partial("index-case", {"sectionClass": "angry-birds"}) %>
+		<%- @partial("index-case", {"sectionClass": "starbucks"}) %>
+		<%- @partial("index-case", {"sectionClass": "starbucks-inverted"}) %>
+	</main>
+	<nav>
+		<%- @partial("top-menu", {"currentPage": "Главная"}) %>
+		<a href="/works.html" class="behind-screen-btn untoggled">
+			<span>Все работы</span>
+		</a>
+		<div class="page-control">
+			<a class="page-prev" href="">↑</a>
+			<div class="page-index" id="pageIndex">01</div>
+			<a class="page-next" href="">↓</a>
+		</div>
+	</nav>
+<%- @partial("footer", {js: @requiredJs}) %>

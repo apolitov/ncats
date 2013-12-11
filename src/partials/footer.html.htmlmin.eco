@@ -1,5 +1,0 @@
-	<!-- DocPad Scripts + Our Own -->
-	<% @js = if @js? then @js else [] %>
-	<%- @getBlock('scripts').add(["/scripts/vendors/vendors.min.js"].concat(@js)).toHTML() %>
-</body>
-</html>

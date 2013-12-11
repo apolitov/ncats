@@ -44,7 +44,6 @@
     "grunt-css": "~0.3.2",
     "bal-util": "~1.15.3",
     "underscore": "~1.4.3",
-    "docpad-plugin-htmlmin": "~2.1.2",
     "docpad-plugin-sass": "~2.6.1",
     "docpad-plugin-livereload": "~2.5.3"
   },

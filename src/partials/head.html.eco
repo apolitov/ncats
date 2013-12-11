@@ -32,6 +32,6 @@
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/apple-touch-icon-114x114-precomposed.png" />
 	<!-- For third-generation iPad with high-resolution Retina display: -->
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/apple-touch-icon-144x144-precomposed.png" />
-	<script type="text/javascript" src="scripts/vendors/modernizr.js"></script>
+	<script type="text/javascript" src="scripts/vendors/modernizr.min.js"></script>
 </head>
 <body>

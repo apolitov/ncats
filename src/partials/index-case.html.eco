@@ -1,0 +1,6 @@
+<div class="section <%= @sectionClass %>">
+	SECTION <%= @sectionClass %>
+	<footer>
+		<a class="show-case-btn" href="">Посмотреть работу</a>
+	</footer>
+</div>

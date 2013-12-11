@@ -1,16 +1,16 @@
 $(document).ready ->
     $.fn.fullpage
+        verticalCentered: false
         easing: 'swing'
         css3: false
-        autoScrolling: false
         afterRender: ->
-            enableAutoScrolling()
             bindControls()
         afterLoad: changeCurrentSlide
 
 
 changeCurrentSlide = (anchor, index) ->
-    $("#pageIndex").text index
+    slideNum = if index > 9 then index.toString() else '0' + index
+    $("#pageIndex").text slideNum
 
 
 enableAutoScrolling = ->

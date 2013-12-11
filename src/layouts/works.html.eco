@@ -1,0 +1,13 @@
+<!-- CSS -->
+<% @requiredCss = ['/styles/works.min.css', '/scripts/vendors/custom-scrollbar/jquery.mCustomScrollbar.css'] %>
+<!-- Brand dependings -->
+<% @requiredCss = @requiredCss.concat(['styles/brands/angry-birds.min.css']) %>
+<% @requiredCss = @requiredCss.concat(['styles/brands/starbucks.min.css']) %>
+<% @requiredCss = @requiredCss.concat(['styles/brands/starbucks-inverted.min.css']) %>
+
+<!-- JS -->
+<% @requiredJs = ['/scripts/works.min.js', '/scripts/vendors/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js'] %>
+
+<%- @partial("head", {css: @requiredCss}) %>
+123
+<%- @partial("footer", {js: @requiredJs}) %>

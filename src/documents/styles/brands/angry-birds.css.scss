@@ -1,0 +1,5 @@
+@import "../base";
+
+main .section.angry-birds {
+	@include bg-cover('../../img/backgrounds/ab.jpg');
+}
