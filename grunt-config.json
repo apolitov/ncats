@@ -4,11 +4,10 @@
       "src": ["out/scripts/index.js"],
       "dest": "out/scripts/index.min.js"
     },
-  "works": {
     "works": {
       "src": ["out/scripts/works.js"],
       "dest": "out/scripts/works.min.js"
-    },
+    }
   },
   "concat": {
     "normalize": {
