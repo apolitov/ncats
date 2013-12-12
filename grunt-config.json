@@ -15,7 +15,7 @@
     },
     "pages": {
       "files": [
-        {"src": ["out/styles/global.css"], "dest": "out/styles/global.min.css"}
+        {"src": ["out/styles/global.css"], "dest": "out/styles/global.min.css"},
         {"src": ["out/styles/index.css"], "dest": "out/styles/index.min.css"},
         {"src": ["out/styles/works.css"], "dest": "out/styles/works.min.css"}
       ]
