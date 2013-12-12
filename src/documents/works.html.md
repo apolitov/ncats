@@ -1,6 +1,6 @@
 ---
-layout: 'index'
-title: 'Главная'
+layout: 'works'
+title: 'Работы'
 cases:
 	- # Angry Bird
 	  cssClass: 'angry-birds'

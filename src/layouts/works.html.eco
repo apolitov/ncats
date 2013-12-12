@@ -1,13 +1,38 @@
 <!-- CSS -->
-<% @requiredCss = ['/styles/works.min.css', '/scripts/vendors/custom-scrollbar/jquery.mCustomScrollbar.css'] %>
-<!-- Brand dependings -->
-<% @requiredCss = @requiredCss.concat(['styles/brands/angry-birds.min.css']) %>
-<% @requiredCss = @requiredCss.concat(['styles/brands/starbucks.min.css']) %>
-<% @requiredCss = @requiredCss.concat(['styles/brands/starbucks-inverted.min.css']) %>
+<% @requiredCss = ['/scripts/vendors/custom-scrollbar/jquery.mCustomScrollbar.css', '/styles/works.min.css'] %>
+<!-- Include brands dependings -->
+<% for c in @document.cases: %>
+    <% @requiredCss = @requiredCss.concat([c.cssPath]) %>
+<% end %>
 
-<!-- JS -->
+<!-- Required JS (just list it here, include is at bottom of page) -->
 <% @requiredJs = ['/scripts/works.min.js', '/scripts/vendors/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js'] %>
 
 <%- @partial("head", {css: @requiredCss}) %>
-123
+
+	<main>
+		<section>
+			123
+		</section>
+		<section>
+			123
+		</section>
+		<section>
+			123
+		</section>
+		<section>
+			123
+		</section>
+		<section>
+			123
+		</section>
+		<section>
+			123
+		</section>
+	</main>
+
+	<nav>
+		<%- @partial("top-menu", {"currentPage": @document.title}) %>
+	</nav>
+
 <%- @partial("footer", {js: @requiredJs}) %>

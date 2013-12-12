@@ -20,6 +20,12 @@
 
 
 /* Global styles */
+
+html, body {
+	height: 100%;
+}
+
+/* Menu */
 ul.main-menu {
 	@include transition(background 0.3s ease-out);
 	@include no-bullets;
