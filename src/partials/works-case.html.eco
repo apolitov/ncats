@@ -1,0 +1,3 @@
+<section class="stripe <%= @sectionClass %>">
+	SECTION <%= @sectionClass %>
+</section>

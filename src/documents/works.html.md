@@ -13,4 +13,24 @@ cases:
 	- # Starbucks #2
 	  cssClass: 'starbucks-inverted'
 	  cssPath: 'styles/brands/starbucks-inverted.min.css'
+
+	- # TEST
+	  cssClass: 'TEST'
+	  cssPath: ''
+
+	- # TEST
+	  cssClass: 'TEST'
+	  cssPath: ''
+
+	- # TEST
+	  cssClass: 'TEST'
+	  cssPath: ''
+
+	- # TEST
+	  cssClass: 'TEST'
+	  cssPath: ''
+
+	- # TEST
+	  cssClass: 'TEST'
+	  cssPath: ''
 ---

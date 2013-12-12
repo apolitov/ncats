@@ -19,7 +19,7 @@
 
 	<!-- DocPad Styles + Our Own -->
 	<% @css = if @css? then @css else [] %>
-	<%- @getBlock('styles').add(["/styles/normalization.min.css"].concat(@css)).toHTML() %>
+	<%- @getBlock('styles').add(["/styles/normalization.min.css", "/styles/global.min.css"].concat(@css)).toHTML() %>
 
 	<!-- Icons -->
 	<!-- Favicon -->

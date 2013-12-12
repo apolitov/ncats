@@ -16,7 +16,7 @@ main {
 	white-space: nowrap;
 }
 
-main section {
+main section.stripe {
 	@include inline-block;
 	position: relative;
 	max-width: 25%;
@@ -25,10 +25,20 @@ main section {
 	height: 100%;
 }
 
+main section.stripe + section.stripe {
+	margin-left: 0.6rem;
+}
+
 
 /* Scrollbar styling */
+.mCSB_horizontal.mCustomScrollBox>.mCSB_scrollTools {
+	height: 1.4rem;
+	margin: 0;
+}
+
 .mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
 .mCSB_horizontal>.mCSB_scrollTools .mCSB_draggerRail {
 	@include border-radius(0px);
 	height: 100%;
+	margin: 0;
 }

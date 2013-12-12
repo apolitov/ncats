@@ -11,24 +11,8 @@
 <%- @partial("head", {css: @requiredCss}) %>
 
 	<main>
-		<section>
-			123
-		</section>
-		<section>
-			123
-		</section>
-		<section>
-			123
-		</section>
-		<section>
-			123
-		</section>
-		<section>
-			123
-		</section>
-		<section>
-			123
-		</section>
+        <!-- Include section for each case. A one-liner prevents spaces between inline-blocks -->
+        <% for c in @document.cases: %><%- @partial("works-case", {"sectionClass": c.cssClass}) %><% end %>
 	</main>
 
 	<nav>

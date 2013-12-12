@@ -1,44 +1,31 @@
 {
-  "min": {
-    "index": {
-      "src": ["out/scripts/index.js"],
-      "dest": "out/scripts/index.min.js"
-    },
-    "works": {
-      "src": ["out/scripts/works.js"],
-      "dest": "out/scripts/works.min.js"
-    }
-  },
-  "concat": {
-    "normalize": {
-      "src": ["out/scripts/vendors/normalize.css","out/styles/style.css"],
-      "dest": "out/styles/normalization.css"
+  "uglify": {
+    "pages": {
+      "files": [
+        {"src": ["out/scripts/index.js"], "dest": "out/scripts/index.min.js"},
+        {"src": ["out/scripts/works.js"], "dest": "out/scripts/works.min.js"}
+      ]
     }
   },
   "cssmin": {
     "normalize": {
-      "src": ["out/styles/normalization.css"],
-      "dest": "out/styles/normalization.min.css"
+      "files": [
+        {"src": ["out/scripts/vendors/normalize.css","out/styles/style.css"], "dest": "out/styles/normalization.min.css"}
+      ]
     },
-    "index": {
-      "src": ["out/styles/index.css"],
-      "dest": "out/styles/index.min.css"
+    "pages": {
+      "files": [
+        {"src": ["out/styles/global.css"], "dest": "out/styles/global.min.css"}
+        {"src": ["out/styles/index.css"], "dest": "out/styles/index.min.css"},
+        {"src": ["out/styles/works.css"], "dest": "out/styles/works.min.css"}
+      ]
     },
-    "works": {
-      "src": ["out/styles/works.css"],
-      "dest": "out/styles/works.min.css"
-    },
-    "angry-birds": {
-      "src": ["out/styles/brands/angry-birds.css"],
-      "dest": "out/styles/brands/angry-birds.min.css"
-    },
-    "starbucks": {
-      "src": ["out/styles/brands/starbucks.css"],
-      "dest": "out/styles/brands/starbucks.min.css"
-    },
-    "starbucks-inverted": {
-      "src": ["out/styles/brands/starbucks-inverted.css"],
-      "dest": "out/styles/brands/starbucks-inverted.min.css"
+    "brands": {
+      "expand": true,
+      "cwd": "out/styles/brands/",
+      "src": ["*.css", "!*.min.css"],
+      "dest": "out/styles/brands/",
+      "ext": ".min.css"
     }
   }
 }
