@@ -3,3 +3,7 @@
 main .section.angry-birds {
 	@include bg-cover('../../img/backgrounds/ab.jpg');
 }
+
+.stripe.angry-birds {
+	@include bg-cover('../../img/backgrounds/ab.jpg', false);
+}

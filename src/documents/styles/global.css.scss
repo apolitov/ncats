@@ -13,7 +13,6 @@ ul.main-menu {
 	position: relative;
 	text-align: center;
 	font-size: 1.5rem;
-	padding: 2.8rem 0 2.8rem 0;
 	margin: 0;
 	color: white;
 
@@ -21,13 +20,31 @@ ul.main-menu {
 		background: rgba(0, 0, 0, 0.5);
 	}
 
+	li {
+		@include inline-block;
+		@include transition(background 0.2s ease-out);
+		padding: 2.8rem 0.9rem 2.8rem 0.9em;
+		text-transform: uppercase;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.5);
+			cursor: pointer;
+		}
+	}
+
+
 	li.logo {
 		position: absolute;
 		left: 10rem;
 		top: 0;
 		height: 100%;
 		width: 100px;
-		/* background: url('http://9cats.ru/logo.png') no-repeat center center; */
+		padding: 0;
+		background: url('http://9cats.ru/logo.png') no-repeat center center;
 
 		a {
 			position: absolute;
@@ -36,15 +53,10 @@ ul.main-menu {
 			width: 100%;
 			height: 100%;
 		}
-	}
 
-	li {
-		@include inline-block;
-		margin-right: 1.8rem;
-		text-transform: uppercase;
-
-		&:last-child {
-			margin-right: 0;
+		&:hover {
+			background: url('http://9cats.ru/logo.png') no-repeat center center;
+			cursor: pointer;
 		}
 	}
 }

@@ -6,7 +6,7 @@
         <% end %>
     </li>
     <li <%= if @currentPage is 'Работы' then 'class=active' %> >
-        Работы
+        <a href="/works.html">Работы</a>
     </li>
     <li <%= if @currentPage is 'Блог' then 'class=active' %> >
         Блог

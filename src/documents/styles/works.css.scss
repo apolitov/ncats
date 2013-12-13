@@ -1,8 +1,6 @@
 @import "base";
 
-body {
-	background-color: #f00;
-}
+$horizontal-scrollbar-height: 1.4rem;
 
 nav {
 	position: absolute;
@@ -18,21 +16,51 @@ main {
 
 main section.stripe {
 	@include inline-block;
+	@include box-sizing(border-box);
 	position: relative;
 	max-width: 25%;
 	min-width: 32rem;
 	background: #0f0;
 	height: 100%;
+	padding: 9.5rem 1.2rem $horizontal-scrollbar-height*2 1.2rem;
+	color: white;
+
+	article {
+		@include opacity(0);
+		@include box-sizing(border-box);
+		@include transition(opacity 0.2s ease-out);
+		display: table;
+		background: rgba(0, 0, 0, 0.3);
+		max-height: 100%;
+		min-height: 100%;
+		width: 100%;
+
+		.info-wrapper {
+			display: table-cell;
+			vertical-align: bottom;
+			padding: 0 0.75rem 9rem 0.75rem;
+			font-size: 0.7rem;
+		}
+
+		h3 {
+			font-size: 1.4rem;
+			margin-top: 0rem;
+			margin-bottom: 0.1rem;
+		}
+	}
+
+	&:hover article {
+		@include opacity(1);
+	}
 }
 
 main section.stripe + section.stripe {
 	margin-left: 0.6rem;
 }
 
-
 /* Scrollbar styling */
 .mCSB_horizontal.mCustomScrollBox>.mCSB_scrollTools {
-	height: 1.4rem;
+	height: $horizontal-scrollbar-height;
 	margin: 0;
 }
 
@@ -41,4 +69,13 @@ main section.stripe + section.stripe {
 	@include border-radius(0px);
 	height: 100%;
 	margin: 0;
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+	background:rgba(255,255,255,0.95);
+}
+
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+	background:rgba(255,255,255,1);
 }

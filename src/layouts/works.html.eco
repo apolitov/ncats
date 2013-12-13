@@ -12,7 +12,7 @@
 
 	<main>
         <!-- Include section for each case. A one-liner prevents spaces between inline-blocks -->
-        <% for c in @document.cases: %><%- @partial("works-case", {"sectionClass": c.cssClass}) %><% end %>
+        <% for c in @document.cases: %><%- @partial("works-case", {"sectionClass": c.cssClass, "category": c.category, "title": c.title, "link": c.link}) %><% end %>
 	</main>
 
 	<nav>

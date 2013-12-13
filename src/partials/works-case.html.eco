@@ -1,3 +1,11 @@
 <section class="stripe <%= @sectionClass %>">
-	SECTION <%= @sectionClass %>
+	<article>
+		<div class="info-wrapper">
+			<div class="category"><%= @category %></div>
+			<h3><%= @title %></h3>
+			<div>
+				<a href="<%= @link %>"><%= @link %></a>
+			</div>
+		</div>
+	</article>
 </section>

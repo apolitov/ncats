@@ -2,12 +2,20 @@
 @import "compass/css3/inline-block";
 @import "compass/css3/transition";
 @import "compass/css3/border-radius";
+@import "compass/css3/box-sizing";
+@import "compass/css3/opacity";
 
 
 /* Mixins */
 
-@mixin bg-cover($img) {
-	background: url($img) no-repeat center center fixed; 
+@mixin bg-cover($img, $is_fixed: true) {
+	background: url($img) no-repeat center center;
+	@if $is_fixed == true {
+		background-attachment: fixed;
+	}
+	@else {
+		background-attachment: scroll;
+	}
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

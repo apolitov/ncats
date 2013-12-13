@@ -3,3 +3,7 @@
 main .section.starbucks {
 	@include bg-cover('../../img/backgrounds/starbucks.jpg');
 }
+
+.stripe.starbucks {
+	@include bg-cover('../../img/backgrounds/starbucks.jpg', false);
+}
