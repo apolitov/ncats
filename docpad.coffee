@@ -118,7 +118,7 @@ docpadConfig = {
             _ = require 'underscore'
 
             # Make sure to register a grunt `default` task
-            command = ["grunt", 'default']
+            command = ["grunt.cmd", 'default']
             
             # Execute
             balUtil.spawn command, {cwd:rootPath,output:true}, ->

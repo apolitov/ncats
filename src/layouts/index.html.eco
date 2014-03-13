@@ -18,12 +18,13 @@
     <nav>
         <%- @partial("top-menu", {"currentPage": @document.title}) %>
         <a href="/works.html" class="behind-screen-btn untoggled">
+            <div class="arrow"></div>
             <span>Все работы</span>
         </a>
         <div class="page-control">
-            <a class="page-prev" href="">↑</a>
+            <a class="page-prev" href=""></a>
             <div class="page-index" id="pageIndex">01</div>
-            <a class="page-next" href="">↓</a>
+            <a class="page-next" href=""></a>
         </div>
     </nav>
 <%- @partial("footer", {js: @requiredJs}) %>

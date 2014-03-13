@@ -25,24 +25,35 @@ ul.main-menu {
 	line-height: $approx-height;
 	max-width: 0;
 	font-size: 1.2rem;
-	text-transform: uppercase;
+	text-transform: uppercase;	
+	text-decoration: none;
+	vertical-align: middle;
 
 	span {
-		color: red;
+		color: black;		
 		padding: 0 $approx-height/2 0 $approx-height/4;
+	}
+
+	& > .arrow {
+		background: url(../../img/arrow-left.png) no-repeat;
+		$arrow-width: 13px;
+		width: $arrow-width;
+		height: $arrow-width * 2;
+		position: absolute;
+		top: $arrow-width / 2;
+		left: -($arrow-width + 2px);
 	}
 
 	&:before {
 		@include border-left-radius($approx-height/2);
 		@include transition(background-color 0.3s ease-out);
-		content: "<";
+		content: "";
 		position: absolute;
 		left: (- $approx-height/2);
 		top: 0;
 		height: $approx-height;
 		width: ($approx-height/2);
 		background-color: $transparent-gray;
-
 	}
 
 	&:hover {
@@ -78,11 +89,20 @@ ul.main-menu {
 		text-align: center;
 	}
 
+	.page-prev, .page-next {		
+		$arrow-height: 13px;
+		width: $arrow-height * 2;
+		height: $arrow-height;
+		left: $arrow-height / 2;
+	}
+
 	.page-prev {
+		background: url(../../img/arrow-up.png) no-repeat;
 		top: -2em;
 	}
 
 	.page-next {
+		background: url(../../img/arrow-down.png) no-repeat;
 		bottom: -2em;
 	}
 }
@@ -102,7 +122,15 @@ footer {
 
 .show-case-btn {
 	position: relative;
-	padding: 1rem 6rem;
+	padding: 0.5rem 3rem;
 	font-size: 1.33rem;
 	background: $transparent-gray;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+	@include transition(background-color 0.3s ease-out);
+
+	&:hover {
+		background: white;
+	}
 }

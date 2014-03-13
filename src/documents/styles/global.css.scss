@@ -26,6 +26,11 @@ ul.main-menu {
 		padding: 2.8rem 0.9rem 2.8rem 0.9em;
 		text-transform: uppercase;
 
+		& > a {
+			color: white;
+			text-decoration: none;
+		}
+
 		&:last-child {
 			margin-right: 0;
 		}
