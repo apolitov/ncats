@@ -2,6 +2,17 @@
 
 main .section.angry-birds {
 	@include bg-cover('../../img/backgrounds/ab.jpg');
+
+	footer > .logo {
+		background: url('../../img/cases/ab/logo.png');
+		$bg-width: 114px;
+		$bg-height: 84px;
+		position: absolute;
+		right: $bg-width / 2;
+		bottom: - $bg-height / 2;
+		width: $bg-width;
+		height: $bg-height;
+	}
 }
 
 .stripe.angry-birds {
